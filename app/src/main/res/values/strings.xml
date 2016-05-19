@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">dangnhap</string>
+    <string name="title_activity_navigation">Navigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="register">Đăng Ký</string>
+    <string name="welcome">Xin chào %s đăng nhập ứng dụng</string>
+</resources>
