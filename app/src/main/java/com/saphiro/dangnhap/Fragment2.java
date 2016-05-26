@@ -61,6 +61,13 @@ public class Fragment2 extends android.support.v4.app.Fragment{
 //            editor.putStringSet("info2", users);
             editor.commit();
 
+            ReadWrite readWrite = new ReadWrite();
+            String filedata = readWrite.readfile(getActivity(), getContext().getFilesDir());
+            String toWrite = filedata+ "\n"+
+                    edtUsername.getText().toString()+","
+                    +edtPass.getText().toString();
+            readWrite.writeFile(getActivity(), toWrite);
+
             Intent intent = new Intent(getActivity(), Navigation.class);
             startActivity(intent);
         }

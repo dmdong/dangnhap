@@ -6,7 +6,16 @@
             <item
                 android:id="@+id/exit"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Thoát" />
+                android:title="Thoát"
+                />
+
+            <item
+                android:id="@+id/changeprofile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Edit Profile"
+                />
+
+
 
 
 </menu>

@@ -1,6 +1,7 @@
 package com.saphiro.dangnhap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -24,6 +25,7 @@ public class Navigation extends AppCompatActivity
     TextView headerEmail;
     TextView welcomeUser;
     NavigationView navigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +109,11 @@ public class Navigation extends AppCompatActivity
 
         if (id == R.id.exit){
             finish();
+        }
+        else if(id == R.id.changeprofile){
+
+            Intent intent = new Intent(this, EditProfile.class);
+            startActivity(intent);
         }
 
 

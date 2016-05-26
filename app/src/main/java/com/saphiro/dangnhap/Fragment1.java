@@ -70,9 +70,14 @@ public class Fragment1 extends android.support.v4.app.Fragment{
         String username = edtUsername.getText().toString();
         String password = edtPass.getText().toString();
 
-        if(username.equals(sharedPreferences.getString("UserID", ""))
-                && password.equals(sharedPreferences.getString("Password", ""))){
-            valid = true;}
+//        if(username.equals(sharedPreferences.getString("UserID", ""))
+//                && password.equals(sharedPreferences.getString("Password", ""))){
+//            valid = true;}
+        ReadWrite readWrite = new ReadWrite();
+        String content = readWrite.readfile(getActivity(), getContext().getFilesDir());
+        if(content.contains(username+","+password)){
+            valid = true;
+        }
         else Toast.makeText(getContext(), "Đăng nhập thất bại!", Toast.LENGTH_SHORT).show();
 
         return valid;
